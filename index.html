@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyraTales - Every Tech Has a Tale to Tell</title>
+    <meta name="description" content="MyraTales is a digital museum exploring the history and evolution of technology and machines.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://font.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+
+    <div class="logo-block">
+      <a href="#top" class="header-logo">MyraTales</a>
+      <p class="tagline">Every Tech has a Tale to tell</p>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#top">Home</a>
+      <a href="#about">About</a>
+      <a href="#collectionSection">Collections</a>
+      <a href="#featured">Featured</a>
+
+      <!-- <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <span class="theme-icon sun">☀</span>
+        <span class="theme-icon moon">☾</span>
+      </button> -->
+    </nav>
+
+  </div>
+</header>
+   
+    <main id="main-content">
+        <section id="top" class="hero">
+            <div class="hero-bg" aria-hidden="true">
+                <span  class="ghost-year">1947</span>
+            </div>
+            <div class="hero-inner">
+                <div class="hero-text">
+                    <p class="hero-eyebrow">A fact to sit with</p>
+                    <h1 id="heroFact" aria-live="polite">The first computer bug was an actual moth.</h1>
+                    <p id="heroDescription" class="description" aria-live="polite">
+                      Explore the story behind a small mistake that gave computer debugging one of its most memorable names.
+                    </p>
+                    <a href="#about" class="btn-primary">Learn More</a>
+                </div>
+
+                <div class="hero-visual" aria-hidden="true">
+  <svg viewBox="0 0 400 400" class="magnifier-illustration" xmlns="http://www.w3.org/2000/svg">
+
+    <defs>
+      <clipPath id="lensClip">
+        <circle cx="165" cy="165" r="105" />
+      </clipPath>
+    </defs>
+
+    <!-- Everything INSIDE the lens: the logbook page, zoomed in -->
+    <g clip-path="url(#lensClip)">
+      <rect x="30" y="30" width="270" height="270" class="page-bg" />
+
+      <!-- faint ruled lines, like notebook paper -->
+      <line x1="40" y1="90" x2="290" y2="90" class="page-rule" />
+      <line x1="40" y1="130" x2="290" y2="130" class="page-rule" />
+      <line x1="40" y1="170" x2="290" y2="170" class="page-rule" />
+      <line x1="40" y1="250" x2="290" y2="250" class="page-rule" />
+
+      <!-- tape strips holding the moth in place -->
+      <rect x="115" y="95" width="30" height="14" class="tape" transform="rotate(-8 130 102)" />
+      <rect x="190" y="195" width="30" height="14" class="tape" transform="rotate(10 205 202)" />
+
+      <!-- the moth, "taped" between the two rules -->
+      <g transform="translate(165,150)">
+        <g class="moth">
+            <ellipse cx="0" cy="0" rx="5" ry="13" class="moth-body" />
+            <path d="M0,-5 C-28,-26 -42,6 -5,13 Z" class="moth-wing" />
+            <path d="M0,-5 C28,-26 42,6 5,13 Z" class="moth-wing" />
+        </g>
+     </g>
+
+      <!-- handwritten-style log annotation -->
+      <text x="45" y="200" class="log-text">Panel F · Relay 70</text>
+      <text x="45" y="240" class="log-text">Sept 9, 1947</text>
+    </g>
+
+    <!-- glass shine, a simple arc, no gradient -->
+    <path d="M90,90 A105,105 0 0,1 190,68" class="lens-shine" />
+
+    <!-- the lens rim, on top of everything inside it -->
+    <circle cx="165" cy="165" r="105" class="lens-rim" />
+
+    <!-- the handle -->
+    <line x1="240" y1="240" x2="330" y2="330" class="handle" />
+  </svg>
+</div>
+                </div>
+            </div>
+            <!-- <a href="#about" class="scroll-cue" aria-label="Scroll down">
+                <span></span>
+            </a> -->
+        </section>
+    <section id="about" class="section about-section">
+  <div class="section-inner">
+
+    <span class="section-label">About</span>
+    <div class="section-divider"></div>
+
+    <p class="about-intro">
+      This site started from a simple habit: noticing that the same story keeps happening.
+    </p>
+
+    <div class="pattern-track">
+      <div class="pattern-line" aria-hidden="true"></div>
+
+      <button class="pattern-card" data-era="ancient">
+        <span class="pattern-year">The Beginning</span>
+        <h3>The First Spark</h3>
+        <p class="pattern-teaser">Before electricity, before machines — just a problem, and someone stubborn enough to solve it.</p>
+        <span class="pattern-action">Read the story <span aria-hidden="true">→</span></span>
+      </button>
+
+      <button class="pattern-card" data-era="atomic">
+        <span class="pattern-year">1940s</span>
+        <h3>The Race Against Time</h3>
+        <p class="pattern-teaser">When invention stopped being a hobby and became a deadline the world couldn't miss.</p>
+        <span class="pattern-action">Read the story <span aria-hidden="true">→</span></span>
+      </button>
+
+      <button class="pattern-card" data-era="present">
+        <span class="pattern-year">Now</span>
+        <h3>The Bet Before the Proof</h3>
+        <p class="pattern-teaser">The same pattern, happening again, right now — before anyone can prove it was right.</p>
+        <span class="pattern-action">Read the story <span aria-hidden="true">→</span></span>
+      </button>
+    </div>
+
+    <p class="about-thesis">
+      MyraTales exists because of that pattern — not the finished version of history,
+      but the stubborn, uncertain middle of it.
+    </p>
+
+  </div>
+</section>
+
+<!-- Story modal — one shared modal, filled dynamically by JS -->
+<div class="story-modal" id="storyModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="storyModalTitle">
+  <div class="story-modal-overlay" id="storyModalOverlay"></div>
+
+  <div class="story-modal-panel">
+    <button class="story-modal-close" id="storyModalClose" aria-label="Close">Close</button>
+
+    <span class="story-modal-era" id="storyModalEra"></span>
+    <h2 id="storyModalTitle"></h2>
+
+    <div class="story-modal-body" id="storyModalBody"></div>
+  </div>
+</div>
+
+<section id="featured" class="section featured-section">
+  <div class="featured-shell">
+    <div class="featured-heading">
+      <div>
+        <p class="featured-eyebrow">Keep exploring</p>
+        <h2>Go beyond the story.</h2>
+      </div>
+      <p class="featured-intro">Four different ways to stay curious after the last paragraph.</p>
+    </div>
+
+    <div class="featured-list">
+      <article class="featured-item featured-item-primary">
+        <button class="featured-trigger" aria-expanded="false" aria-controls="featured-quiz-panel">
+          <span class="featured-icon" aria-hidden="true">?</span>
+          <span class="featured-trigger-copy">
+            <span class="featured-kicker">Remember more</span>
+            <span class="featured-title">Quizzes</span>
+          </span>
+          <span class="featured-arrow" aria-hidden="true">↗</span>
+        </button>
+        <div class="featured-panel" id="featured-quiz-panel">
+          <p>Test what actually stuck. Short, sharp quizzes built from real stories on this site, not trivia for its own sake.</p>
+          <a href="quizzes.html" class="featured-cta">Take a quiz</a>
+        </div>
+      </article>
+
+      <article class="featured-item">
+        <button class="featured-trigger" aria-expanded="false" aria-controls="featured-theme-panel">
+          <span class="featured-icon" aria-hidden="true">⌘</span>
+          <span class="featured-trigger-copy">
+            <span class="featured-kicker">Follow a thread</span>
+            <span class="featured-title">Tech themes</span>
+          </span>
+          <span class="featured-arrow" aria-hidden="true">↗</span>
+        </button>
+        <div class="featured-panel" id="featured-theme-panel">
+          <p>Pick a lane: automotive, AI, robotics, and more. Follow one thread of technology through its own history.</p>
+          <a href="TechThemes.html" class="featured-cta">Explore themes</a>
+        </div>
+      </article>
+
+      <article class="featured-item">
+        <button class="featured-trigger" aria-expanded="false" aria-controls="featured-archive-panel">
+          <span class="featured-icon" aria-hidden="true">≡</span>
+          <span class="featured-trigger-copy">
+            <span class="featured-kicker">Ask better questions</span>
+            <span class="featured-title">The archive</span>
+          </span>
+          <span class="featured-arrow" aria-hidden="true">↗</span>
+        </button>
+        <div class="featured-panel" id="featured-archive-panel">
+          <p>Find the answers behind the questions everyone has quietly wondered about technology.</p>
+          <a href="archive.html" class="featured-cta">Ask something</a>
+        </div>
+      </article>
+
+      <article class="featured-item">
+        <button class="featured-trigger" aria-expanded="false" aria-controls="featured-myth-panel">
+          <span class="featured-icon" aria-hidden="true">✓</span>
+          <span class="featured-trigger-copy">
+            <span class="featured-kicker">Check your assumptions</span>
+            <span class="featured-title">Myth or fact</span>
+          </span>
+          <span class="featured-arrow" aria-hidden="true">↗</span>
+        </button>
+        <div class="featured-panel" id="featured-myth-panel">
+          <p>Guess before you read. Some of what sounds made up is completely true, and some of what feels certain is wrong.</p>
+          <a href="myth-or-fact.html" class="featured-cta">Test yourself</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="collectionSection" class="collection-section">
+  <div class="collection-shell">
+    <div class="collection-topbar">
+      <div>
+        <p class="collection-eyebrow">MyraTales / Field guide</p>
+        <h2>Collections</h2>
+      </div>
+      <p class="collection-summary">Stories about the machines, ideas, and accidents that moved the world forward.</p>
+      <a class="collection-view-all" href="TechThemes.html">View all</a>
+    </div>
+
+    <nav class="collection-tabs" aria-label="Collection categories">
+      <a class="active" href="#collectionSection">All stories</a>
+      <a href="#computing">Computing</a>
+      <a href="#ai">Artificial intelligence</a>
+      <a href="#robotics">Robotics</a>
+      <a href="#automotive">Automotive</a>
+    </nav>
+
+    <div class="collection-board">
+      <article id="computing" class="collection-card collection-card-featured">
+        <div class="collection-card-image image-computer" role="img" aria-label="A vintage computer in a dark archive"></div>
+        <div class="collection-card-shade"></div>
+        <div class="collection-card-content">
+          <span class="collection-card-label">Featured collection</span>
+          <h3>The machines that changed how we think</h3>
+          <p>A look at the ideas that shaped computing, from punched cards to the systems in our pockets.</p>
+        </div>
+      </article>
+
+      <article class="collection-card collection-card-story">
+        <div class="collection-card-image image-moth" role="img" aria-label="A close-up of a moth on paper"></div>
+        <div class="collection-card-content">
+          <span class="collection-card-label">Computing · 1947</span>
+          <h3>The bug was not a metaphor</h3>
+          <p>How one moth became part of computer history.</p>
+        </div>
+      </article>
+
+      <article id="robotics" class="collection-card collection-card-story">
+        <div class="collection-card-image image-robot" role="img" aria-label="A robotic arm in a workshop"></div>
+        <div class="collection-card-content">
+          <span class="collection-card-label">Robotics · 1961</span>
+          <h3>When a machine got a job</h3>
+          <p>A look at the early use of industrial robots in the workplace.</p>
+        </div>
+      </article>
+
+      <article id="ai" class="collection-card collection-card-compact">
+        <div class="collection-card-image image-ai" role="img" aria-label="Abstract artificial intelligence data visualization"></div>
+        <div class="collection-card-content">
+          <span class="collection-card-label">Artificial intelligence</span>
+          <h3>The bet before the proof</h3>
+        </div>
+      </article>
+
+      <article id="automotive" class="collection-card collection-card-compact">
+        <div class="collection-card-image image-car" role="img" aria-label="A futuristic silver car at an exhibition"></div>
+        <div class="collection-card-content">
+          <span class="collection-card-label">Automotive</span>
+          <h3>Designing the road ahead</h3>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-shell">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="#top" class="footer-logo">MyraTales</a>
+        <p>Every technology has a tale to tell.</p>
+      </div>
+
+      <div class="footer-column">
+        <h2>Explore</h2>
+        <a href="#about">About the archive</a>
+        <a href="#collectionSection">Collections</a>
+        <a href="#featured">Featured tools</a>
+      </div>
+
+      <div class="footer-column">
+        <h2>Go deeper</h2>
+        <a href="quizzes.html">Quizzes</a>
+        <a href="themes.html">Tech themes</a>
+        <a href="archive.html">Ask the archive</a>
+        <a href="myth-or-fact.html">Myth or fact</a>
+        <a href="terms.html">Terms and conditions</a>
+        <a href="privacy.html">Privacy policy</a>
+      </div>
+
+      <div class="footer-note">
+        <span class="footer-note-label">A note from the archive</span>
+        <p>The finished version of history is useful. The uncertain middle is where the interesting stories live.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 MyraTales. Built for curious minds.</p>
+      <div class="footer-bottom-links">
+        <a href="#top">Back to top</a>
+        <a href="#about">The beginning</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- EARLY ACCESS DISCLAIMER MODAL -->
+<div class="notice-modal" id="noticeModal" role="dialog" aria-modal="true" aria-labelledby="noticeTitle" aria-hidden="true">
+  <div class="notice-overlay" id="noticeOverlay"></div>
+
+  <div class="notice-panel">
+    <span class="notice-eyebrow">Early Access · Please Read</span>
+
+    <h2 id="noticeTitle">This site is still being written.</h2>
+
+    <div class="notice-body">
+      <p>
+        MyraTales is currently in early access. Articles are published as they're researched and written — which means some pages may be incomplete, and some stories are still being verified against their sources.
+      </p>
+      <p>
+        If you spot something that looks off, or a fact you think deserves a second look, please let me know. Every correction is welcome, and every reader makes the archive better.
+      </p>
+    </div>
+
+    <div class="notice-actions">
+      <a href="mailto:pelewurababatunde09@gmail.com?subject=MyraTales%20—%20Feedback&body=Page%20or%20article%3A%20%0A%0AWhat%20I%20noticed%3A%20" class="notice-btn notice-btn-primary">
+        Report an issue
+      </a>
+      <button type="button" class="notice-btn notice-btn-ghost" id="noticeClose">
+        Continue reading
+      </button>
+    </div>
+
+    <p class="notice-footnote">
+      You won't see this message again on this device.
+    </p>
+  </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
