@@ -277,7 +277,7 @@ featuredItems.forEach(item => {
 });
 /* ===== Early access notice modal ===== */
 (function () {
-  const KEY = 'myratales_notice_seen';
+  const KEY = 'myratales_notice_seen_session';
   const modal = document.getElementById('noticeModal');
   const overlay = document.getElementById('noticeOverlay');
   const closeBtn = document.getElementById('noticeClose');
@@ -285,7 +285,7 @@ featuredItems.forEach(item => {
   if (!modal) return;
 
   // If they've already seen it, never show again
-  if (localStorage.getItem(KEY)) return;
+  if (sessionStorage.getItem(KEY)) return;
 
   function openModal() {
     modal.classList.add('open');
@@ -297,7 +297,7 @@ featuredItems.forEach(item => {
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('notice-open');
-    localStorage.setItem(KEY, '1');
+    sessionStorage.setItem(KEY, '1');
   }
 
   // Wait 3 seconds after load
@@ -307,7 +307,6 @@ featuredItems.forEach(item => {
 
   // Close handlers
   closeBtn.addEventListener('click', closeModal);
-  overlay.addEventListener('click', closeModal);
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('open')) {
