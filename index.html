@@ -104,9 +104,6 @@
 </div>
                 </div>
             </div>
-            <!-- <a href="#about" class="scroll-cue" aria-label="Scroll down">
-                <span></span>
-            </a> -->
         </section>
     <section id="about" class="section about-section">
   <div class="section-inner">
@@ -187,7 +184,12 @@
         </button>
         <div class="featured-panel" id="featured-quiz-panel">
           <p>Test what actually stuck. Short, sharp quizzes built from real stories on this site, not trivia for its own sake.</p>
-          <a href="quizzes.html" class="featured-cta">Take a quiz</a>
+          <a href="quizzes.html" class="featured-cta"
+             data-coming-soon
+             data-message="Quizzes are still being written."
+             data-suggest="In the meantime, browse the"
+             data-suggest-link="#collectionSection"
+             data-suggest-label="Collections">Take a quiz</a>
         </div>
       </article>
 
@@ -202,7 +204,12 @@
         </button>
         <div class="featured-panel" id="featured-theme-panel">
           <p>Pick a lane: automotive, AI, robotics, and more. Follow one thread of technology through its own history.</p>
-          <a href="TechThemes.html" class="featured-cta">Explore themes</a>
+          <a href="TechThemes.html" class="featured-cta"
+             data-coming-soon
+             data-message="Themes are still being organised."
+             data-suggest="You can explore what's already here through the"
+             data-suggest-link="#collectionSection"
+             data-suggest-label="Collections">Explore themes</a>
         </div>
       </article>
 
@@ -217,7 +224,12 @@
         </button>
         <div class="featured-panel" id="featured-archive-panel">
           <p>Find the answers behind the questions everyone has quietly wondered about technology.</p>
-          <a href="archive.html" class="featured-cta">Ask something</a>
+          <a href="archive.html" class="featured-cta"
+             data-coming-soon
+             data-message="The archive is still being assembled."
+             data-suggest="The stories available so far live in"
+             data-suggest-link="#collectionSection"
+             data-suggest-label="Collections">Ask something</a>
         </div>
       </article>
 
@@ -232,7 +244,12 @@
         </button>
         <div class="featured-panel" id="featured-myth-panel">
           <p>Guess before you read. Some of what sounds made up is completely true, and some of what feels certain is wrong.</p>
-          <a href="myth-or-fact.html" class="featured-cta">Test yourself</a>
+          <a href="myth-or-fact.html" class="featured-cta"
+             data-coming-soon
+             data-message="Myth or fact is still being researched."
+             data-suggest="For now, the full stories are in"
+             data-suggest-link="#collectionSection"
+             data-suggest-label="Collections">Test yourself</a>
         </div>
       </article>
     </div>
@@ -247,7 +264,12 @@
         <h2>Collections</h2>
       </div>
       <p class="collection-summary">Stories about the machines, ideas, and accidents that moved the world forward.</p>
-      <a class="collection-view-all" href="TechThemes.html">View all</a>
+      <a class="collection-view-all" href="TechThemes.html"
+         data-coming-soon
+         data-message="The full theme index is still being built."
+         data-suggest="In the meantime, the current stories are on the"
+         data-suggest-link="#collectionSection"
+         data-suggest-label="Collections page">View all</a>
     </div>
 
     <nav class="collection-tabs" aria-label="Collection categories">
@@ -326,12 +348,36 @@
 
       <div class="footer-column">
         <h2>Go deeper</h2>
-        <a href="quizzes.html">Quizzes</a>
-        <a href="themes.html">Tech themes</a>
-        <a href="archive.html">Ask the archive</a>
-        <a href="myth-or-fact.html">Myth or fact</a>
-        <a href="terms.html">Terms and conditions</a>
-        <a href="privacy.html">Privacy policy</a>
+        <a href="quizzes.html" data-coming-soon
+           data-message="Quizzes are still being written."
+           data-suggest="Browse the"
+           data-suggest-link="#collectionSection"
+           data-suggest-label="Collections">Quizzes</a>
+        <a href="themes.html" data-coming-soon
+           data-message="Themes are still being organised."
+           data-suggest="In the meantime, explore the"
+           data-suggest-link="#collectionSection"
+           data-suggest-label="Collections">Tech themes</a>
+        <a href="archive.html" data-coming-soon
+           data-message="The archive is still being assembled."
+           data-suggest="The stories available so far live in"
+           data-suggest-link="#collectionSection"
+           data-suggest-label="Collections">Ask the archive</a>
+        <a href="myth-or-fact.html" data-coming-soon
+           data-message="Myth or fact is still being researched."
+           data-suggest="For now, the full stories are in"
+           data-suggest-link="#collectionSection"
+           data-suggest-label="Collections">Myth or fact</a>
+        <a href="terms.html" data-coming-soon
+           data-message="Terms and conditions are being prepared."
+           data-suggest="Read more about the site in the"
+           data-suggest-link="#about"
+           data-suggest-label="About section">Terms and conditions</a>
+        <a href="privacy.html" data-coming-soon
+           data-message="The privacy policy is being prepared."
+           data-suggest="Read more about the site in the"
+           data-suggest-link="#about"
+           data-suggest-label="About section">Privacy policy</a>
       </div>
 
       <div class="footer-note">
@@ -379,6 +425,16 @@
     </p>
   </div>
 </div>
+
+<!-- COMING SOON TOAST -->
+<div class="soon-toast" id="soonToast" role="status" aria-live="polite" aria-hidden="true">
+  <span class="soon-toast-icon" aria-hidden="true">⚠</span>
+  <span class="soon-toast-text">
+    <span class="soon-toast-message" id="soonMessage"></span>
+    <span class="soon-toast-suggestion" id="soonSuggestion"></span>
+  </span>
+</div>
+
     <script src="script.js"></script>
 </body>
 </html>
