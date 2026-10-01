@@ -44,18 +44,6 @@ button{
   --accent: #1f6fb2;
   --accent-hover: #175a91;
 }
-
-body.dark-mode {
-  --bg: #0b1521;
-  --bg-alt: #101d2c;
-  --card: #16273a;
-  --border: #23374d;
-  --ink: #eef3f8;
-  --ink-dim: #8fa3b8;
-  --accent: #4fd1ff;
-  --accent-hover: #2bb8ea;
-}
-
 body {
   background: var(--bg);
   color: var(--ink);
@@ -139,55 +127,6 @@ body {
   color: var(--accent);
 }
 
-/* ===== Theme toggle ===== */
-.theme-toggle {
-  background: none;
-  border: 1.5px solid var(--border);
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  position: relative;
-  transition: border-color 0.2s ease;
-}
-
-.theme-toggle:hover {
-  border-color: var(--accent);
-}
-
-.theme-icon {
-  position: absolute;
-  font-size: 15px;
-  color: var(--ink);
-  transition: opacity 0.2s ease, transform 0.3s ease, color 0.2s ease;
-}
-
-.theme-icon.sun {
-  opacity: 1;
-  transform: rotate(0deg);
-}
-
-.theme-icon.moon {
-  opacity: 0;
-  transform: rotate(-90deg);
-}
-
-body.dark-mode .theme-icon.sun {
-  opacity: 0;
-  transform: rotate(90deg);
-}
-
-body.dark-mode .theme-icon.moon {
-  opacity: 1;
-  transform: rotate(0deg);
-}
-
-.theme-toggle:hover .theme-icon {
-  color: var(--accent);
-}
 
 /* ===== Hamburger icon ===== */
 .menu-toggle {
