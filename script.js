@@ -314,3 +314,69 @@ featuredItems.forEach(item => {
     }
   });
 })();
+
+/* ===== Coming soon toast ===== */
+(function () {
+  const toast = document.getElementById('soonToast');
+  const messageEl = document.getElementById('soonMessage');
+  const suggestionEl = document.getElementById('soonSuggestion');
+  const links = document.querySelectorAll('[data-coming-soon]');
+
+  if (!toast || !messageEl || !suggestionEl || links.length === 0) return;
+
+  let hideTimer = null;
+
+  function showToast(message, suggest, suggestLink, suggestLabel) {
+    messageEl.textContent = message;
+
+    // Build the suggestion line dynamically so the link is clickable
+    suggestionEl.innerHTML = '';
+
+    if (suggest) {
+      suggestionEl.appendChild(document.createTextNode(suggest + ' '));
+    }
+
+    if (suggestLink && suggestLabel) {
+      const link = document.createElement('a');
+      link.href = suggestLink;
+      link.textContent = suggestLabel;
+      link.className = 'soon-toast-link';
+      suggestionEl.appendChild(link);
+
+      // Close the toast once they click through
+      link.addEventListener('click', hideToast);
+    }
+
+    toast.classList.add('show');
+    toast.setAttribute('aria-hidden', 'false');
+
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(hideToast, 6000);
+  }
+
+  function hideToast() {
+    toast.classList.remove('show');
+    toast.setAttribute('aria-hidden', 'true');
+    clearTimeout(hideTimer);
+  }
+
+  links.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const message = link.dataset.message || 'This section is still being written.';
+      const suggest = link.dataset.suggest || '';
+      const suggestLink = link.dataset.suggestLink || '';
+      const suggestLabel = link.dataset.suggestLabel || '';
+
+      showToast(message, suggest, suggestLink, suggestLabel);
+    });
+  });
+
+  // Dismiss on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && toast.classList.contains('show')) {
+      hideToast();
+    }
+  });
+})();
