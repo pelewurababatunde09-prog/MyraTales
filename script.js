@@ -20,7 +20,7 @@ if (menuToggle && navLinks) {
 }
 
 // Theme toggle: system preference + manual override + persistence
-const themeToggle = document.getElementById('themeToggle');
+
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
 
 const newsSneakPeekTrack = document.getElementById('newsSneakPeekTrack');
@@ -53,37 +53,6 @@ if (newsSneakPeekTrack && newsSneakPeekPrevious && newsSneakPeekNext) {
   updateNewsSneakPeekButtons();
 }
 
-function applyTheme(isDark) {
-  document.body.classList.toggle('dark-mode', isDark);
-  if (themeToggle) {
-    themeToggle.setAttribute('aria-pressed', isDark);
-    themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-  }
-}
-
-const savedTheme = localStorage.getItem('theme');
-
-if (savedTheme === 'dark') {
-  applyTheme(true);
-} else if (savedTheme === 'light') {
-  applyTheme(false);
-} else {
-  applyTheme(prefersDark.matches);
-}
-
-if (themeToggle) {
-  themeToggle.addEventListener('click', () => {
-    const isDark = document.body.classList.contains('dark-mode');
-    applyTheme(!isDark);
-    localStorage.setItem('theme', !isDark ? 'dark' : 'light');
-  });
-}
-
-prefersDark.addEventListener('change', (e) => {
-  if (!localStorage.getItem('theme')) {
-    applyTheme(e.matches);
-  }
-});
 
 const hero = document.querySelector('.hero');
 const heroVisual = document.querySelector('.hero-visual');
